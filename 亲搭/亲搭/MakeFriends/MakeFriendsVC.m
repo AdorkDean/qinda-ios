@@ -8,6 +8,7 @@
 
 #import "MakeFriendsVC.h"
 #import "MakeFriendsCell.h"
+#import "ORCycleLabel.h"
 
 @interface MakeFriendsVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -85,6 +86,12 @@
     [broadcastView addSubview:broadcastImg];
     broadcastImg.center = leftView.center;
 
+    // 广播
+    ORCycleLabel *label = [[ORCycleLabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(broadcastImg.frame)+5, 5, itemWidth*4-60, 40)];
+    label.text = @"有志愿者一起来做亲搭平台的吗？加QQ群：鲍思高青年联谊会 736756312 或微信群：1308430141";
+    label.style = ORTextCycleStyleAlways;
+    label.rate = 0.4;
+    [broadcastView addSubview:label];
     [headView addSubview:broadcastView];
     
     // 头视图 底部筛选区域

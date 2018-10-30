@@ -8,11 +8,11 @@
 
 #import "CommunityVC.h"
 #import "CommunityCell.h"
-
+#import "CommunityModel.h"
 @interface CommunityVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(strong,nonatomic)UITableView *tableView;
-
+@property(strong,nonatomic)NSMutableArray *dataModel;
 
 @end
 
@@ -26,7 +26,9 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     self.view.backgroundColor = DFTColor(240, 240, 240);
-    _tableView.backgroundColor = [UIColor yellowColor];//DFTColor(240, 240, 240);
+    _tableView.backgroundColor = DFTColor(240, 240, 240);
+    _tableView.estimatedRowHeight = 85;
+    _tableView.rowHeight = UITableViewAutomaticDimension;
     [self.view addSubview:_tableView];
     // 搜索按钮
     UIButton *serchBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 23, 23)];
@@ -41,8 +43,103 @@
     self.navigationItem.rightBarButtonItems = @[addBtnItem,serchBtnItem];
     
     
+    // 模拟数据
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    _dataModel = [NSMutableArray array];
+    for (int i = 0; i<5; i++) {
+        if (i<2) {
+            dict = @{@"headerImg":@"header",
+                     @"name":@"会飞的鱼",
+                     @"senderInfo":@"生死挈阔，与子成说：执子之手，与子偕老！",
+                     @"time":@"25分钟前",
+                     @"imgArr":@[
+                             @"社区图片01",
+                             @"社区图片02",
+                             @"社区图片03",
+                             @"社区图片01",
+                             @"社区图片02",
+                             @"社区图片03"
+                             ].mutableCopy,
+                     @"nameArr":@[
+                             @"小猪佩奇",
+                             @"红果果",
+                             @"小浣熊",
+                             @"漩涡鸣人",
+                             @"路飞",
+                             @"犬夜叉"
+                             ].mutableCopy
+                     }.mutableCopy;
+            CommunityModel *model = [[CommunityModel alloc]initWithDictionary:dict];
+            NSLog(@"model%d=====%@",i,model.imgArr);
+
+            [_dataModel addObject:model];
+            
+            NSLog(@"data=====%@",_dataModel);
+        } else if (i>=2 && i<3){
+            dict = @{@"headerImg":@"header",
+                     @"name":@"会跑的🐷",
+                     @"senderInfo":@"生死挈阔，与子成说!",
+                     @"time":@"30分钟前",
+                     @"imgArr":@[
+                             @"社区图片01",
+                             @"社区图片02",
+                             @"社区图片03"
+                             ].mutableCopy,
+                     @"nameArr":@[
+                             @"小猪佩奇",
+                             @"路飞",
+                             @"犬夜叉"
+                             ].mutableCopy
+                     }.mutableCopy;
+            
+            CommunityModel *model = [[CommunityModel alloc]initWithDictionary:dict];
+            NSLog(@"model%d=====%@",i,model.senderInfo);
+
+            [_dataModel addObject:model];
+            NSLog(@"data=====%@",_dataModel);
+        } else {
+            dict = @{@"headerImg":@"header",
+                     @"name":@"会跑的🐷",
+                     @"senderInfo":@"生死挈阔，与子成说!",
+                     @"time":@"30分钟前",
+                     @"imgArr":@[
+                             @"社区图片01",
+                             @"社区图片02",
+                             @"社区图片03",
+                             @"社区图片01",
+                             @"社区图片02",
+                             @"社区图片03",
+                             @"社区图片01",
+                             @"社区图片02",
+                             @"社区图片03"
+                             ].mutableCopy,
+                     @"nameArr":@[
+                             @"小猪佩奇",
+                             @"路飞",
+                             @"犬夜叉",
+                             @"小猪佩奇",
+                             @"路飞",
+                             @"犬夜叉",
+                             @"小猪佩奇",
+                             @"路飞",
+                             @"犬夜叉",
+                             @"小猪佩奇",
+                             @"路飞",
+                             @"犬夜叉"
+                             ].mutableCopy
+                     }.mutableCopy;
+            
+            CommunityModel *model = [[CommunityModel alloc]initWithDictionary:dict];
+            NSLog(@"model%d=====%@",i,model.senderInfo);
+            
+            [_dataModel addObject:model];
+            NSLog(@"data=====%@",_dataModel);
+        }
+    }
+    
     [self creatUI];
 }
+
 #pragma 搜索方法
 - (void)searchAction{
     NSLog(@"searchAction");
@@ -149,22 +246,52 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"CommunityCell" owner:self options:nil]firstObject];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    
-    
-    
-//    cell.heartClick = ^(BOOL heart){
-//        NSLog(@"💓否？%d",heart);
-//    };
-//    cell.commonClick = ^(){
-//        NSLog(@"评论评论");
-//    };
+    CommunityModel *model = _dataModel[indexPath.row];
+    NSLog(@"_dataModel=%@\n\nmodel=%@",_dataModel, model);
+    cell.comModel = model;
+
+    cell.heartClick = ^(BOOL heart){
+        NSLog(@"💓否？%d",heart);
+    };
+    cell.commonClick = ^(){
+        NSLog(@"评论评论");
+    };
     return cell;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return WIDTH+55;
+
+    CommunityModel *comModel = _dataModel[indexPath.row];
+    CGFloat labelWidth = WIDTH*3/5.0;
+    CGFloat sendLabelHeight = [self textHeightFromeMode:comModel.senderInfo labelWidth:labelWidth];
+
+    CGFloat imgHeight = (labelWidth-20)/3.0;
+    CGFloat imgViewHeight = 0;
+    if (comModel.imgArr.count == 0) {
+        imgViewHeight = 0;
+    } else if ((comModel.imgArr.count > 0) && (comModel.imgArr.count <= 3)){
+        imgViewHeight = imgHeight+60;
+    } else if ((comModel.imgArr.count > 3) && (comModel.imgArr.count <= 6)){
+        imgViewHeight = imgHeight*2+50;
+    } else {
+        imgViewHeight = imgHeight*3+40;
+    }
+
+    NSString *nameStr = @"";
+    for (int i=0; i<comModel.nameArr.count; i++) {
+        NSString *temStr = [NSString stringWithFormat:@"%@、",comModel.nameArr[i]];
+        nameStr = [NSString stringWithFormat:@"%@%@",nameStr,temStr];
+    }
+    NSString *nextStr = [NSString stringWithFormat:@"等 %ld 人觉得很赞。",comModel.nameArr.count];
+    NSString *receiveStr = [NSString stringWithFormat:@"%@%@",nameStr,nextStr];
+    CGFloat receiveViewHeight = [self textHeightFromeMode:receiveStr labelWidth:labelWidth];
+
+    return 40+sendLabelHeight+imgViewHeight+40+receiveViewHeight+10;
 }
-
-
-
+// 返回 label 高度
+- (CGFloat)textHeightFromeMode:(NSString *)text labelWidth:(CGFloat)labelWidth{
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(labelWidth, 500) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17.0]} context:nil];
+    
+    return rect.size.height;
+}
 @end

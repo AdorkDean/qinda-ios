@@ -17,6 +17,9 @@
 		65139AC421801820004DDF80 /* MakeFriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65139AC221801820004DDF80 /* MakeFriendsCell.xib */; };
 		65139ACD2181A701004DDF80 /* CommunityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139ACB2181A701004DDF80 /* CommunityCell.m */; };
 		65139ACE2181A701004DDF80 /* CommunityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65139ACC2181A701004DDF80 /* CommunityCell.xib */; };
+		65139AD42187F55C004DDF80 /* ORCycleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AD32187F55C004DDF80 /* ORCycleLabel.m */; };
+		65139AD721882A82004DDF80 /* CommunityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AD621882A82004DDF80 /* CommunityModel.m */; };
+		65139ADA218841A3004DDF80 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AD9218841A3004DDF80 /* Foundation+Log.m */; };
 		655ABEBC216F34CA0067ED86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABEBB216F34CA0067ED86 /* main.m */; };
 		655ABEBF216F34CA0067ED86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABEBE216F34CA0067ED86 /* AppDelegate.m */; };
 		655ABEC2216F34CA0067ED86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABEC1216F34CA0067ED86 /* ViewController.m */; };
@@ -72,6 +75,11 @@
 		65139ACA2181A701004DDF80 /* CommunityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityCell.h; sourceTree = "<group>"; };
 		65139ACB2181A701004DDF80 /* CommunityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityCell.m; sourceTree = "<group>"; };
 		65139ACC2181A701004DDF80 /* CommunityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityCell.xib; sourceTree = "<group>"; };
+		65139AD22187F55C004DDF80 /* ORCycleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORCycleLabel.h; sourceTree = "<group>"; };
+		65139AD32187F55C004DDF80 /* ORCycleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORCycleLabel.m; sourceTree = "<group>"; };
+		65139AD521882A82004DDF80 /* CommunityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityModel.h; sourceTree = "<group>"; };
+		65139AD621882A82004DDF80 /* CommunityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityModel.m; sourceTree = "<group>"; };
+		65139AD9218841A3004DDF80 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		655ABEB7216F34CA0067ED86 /* 亲搭.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "亲搭.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		655ABEBB216F34CA0067ED86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		655ABEBD216F34CA0067ED86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -176,6 +184,8 @@
 		65139AB2217DA0FA004DDF80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				65139AD521882A82004DDF80 /* CommunityModel.h */,
+				65139AD621882A82004DDF80 /* CommunityModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +260,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		65139AD02187F55C004DDF80 /* OtherTools */ = {
+			isa = PBXGroup;
+			children = (
+				65139AD8218841A3004DDF80 /* 打印转汉字 */,
+				65139AD12187F55C004DDF80 /* ORCycleLabel */,
+			);
+			path = OtherTools;
+			sourceTree = "<group>";
+		};
+		65139AD12187F55C004DDF80 /* ORCycleLabel */ = {
+			isa = PBXGroup;
+			children = (
+				65139AD22187F55C004DDF80 /* ORCycleLabel.h */,
+				65139AD32187F55C004DDF80 /* ORCycleLabel.m */,
+			);
+			path = ORCycleLabel;
+			sourceTree = "<group>";
+		};
+		65139AD8218841A3004DDF80 /* 打印转汉字 */ = {
+			isa = PBXGroup;
+			children = (
+				65139AD9218841A3004DDF80 /* Foundation+Log.m */,
+			);
+			path = "打印转汉字";
+			sourceTree = "<group>";
+		};
 		655ABEAE216F34CA0067ED86 = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +309,7 @@
 		655ABEB9216F34CA0067ED86 /* 亲搭 */ = {
 			isa = PBXGroup;
 			children = (
+				65139AD02187F55C004DDF80 /* OtherTools */,
 				655ABF0E216F409F0067ED86 /* HXTools */,
 				655ABF13216F409F0067ED86 /* Images */,
 				655ABF16216F409F0067ED86 /* MakeFriends */,
@@ -574,8 +611,11 @@
 				655ABEC2216F34CA0067ED86 /* ViewController.m in Sources */,
 				65139AA4217967D4004DDF80 /* HXLostPassWordVC.m in Sources */,
 				65139ACD2181A701004DDF80 /* CommunityCell.m in Sources */,
+				65139AD42187F55C004DDF80 /* ORCycleLabel.m in Sources */,
+				65139AD721882A82004DDF80 /* CommunityModel.m in Sources */,
 				655ABF33217091720067ED86 /* HXLoginVC.m in Sources */,
 				655ABF1C216F409F0067ED86 /* HXLeadScorllVC.m in Sources */,
+				65139ADA218841A3004DDF80 /* Foundation+Log.m in Sources */,
 				655ABF22216F41330067ED86 /* CommunityVC.m in Sources */,
 				65139A99217862E1004DDF80 /* MBProgressHUD+NJ.m in Sources */,
 				65139AC321801820004DDF80 /* MakeFriendsCell.m in Sources */,
