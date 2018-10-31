@@ -153,7 +153,8 @@
 				65139A96217862E1004DDF80 /* MBProgressHUD.h */,
 				65139A97217862E1004DDF80 /* MBProgressHUD.m */,
 			);
-			path = MBProgressHUD;
+			name = MBProgressHUD;
+			path = ../HXTools/MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		65139A9D21788A9C004DDF80 /* HXRegisterVC */ = {
@@ -263,6 +264,7 @@
 		65139AD02187F55C004DDF80 /* OtherTools */ = {
 			isa = PBXGroup;
 			children = (
+				65139A90217862E1004DDF80 /* MBProgressHUD */,
 				65139AD8218841A3004DDF80 /* 打印转汉字 */,
 				65139AD12187F55C004DDF80 /* ORCycleLabel */,
 			);
@@ -374,7 +376,6 @@
 		655ABF0E216F409F0067ED86 /* HXTools */ = {
 			isa = PBXGroup;
 			children = (
-				65139A90217862E1004DDF80 /* MBProgressHUD */,
 				655ABF0F216F409F0067ED86 /* HXLeaderVC */,
 				655ABF34217097FC0067ED86 /* HXNavigationVC */,
 				655ABF2C216F4B250067ED86 /* HXTabBarVC */,

@@ -11,6 +11,6 @@
 @interface CommunityCell : UITableViewCell
 
 @property(strong,nonatomic)CommunityModel*comModel;
-@property(strong,nonatomic)void(^heartClick)(BOOL click);
+@property(strong,nonatomic)void(^heartClick)(BOOL click, CGFloat receiveViewHeight, NSMutableArray *nameArr);
 @property(strong,nonatomic)void(^commonClick)();
 @end

@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *senderInfo;
 @property (strong, nonatomic) NSString *time;
+@property (assign, nonatomic) NSString *heart;
 @property (strong, nonatomic) NSMutableArray *imgArr;
 @property (strong, nonatomic) NSMutableArray *nameArr;
 

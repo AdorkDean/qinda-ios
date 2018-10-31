@@ -44,8 +44,7 @@
     imgNameArr = @[@"yindao1.jpg",@"yindao2.jpg"].mutableCopy;
     
 //    3.创建引导图控制器
-    HXLeadScorllVC *hxSVC =
-    [[HXLeadScorllVC alloc]initWithImgNameArr:imgNameArr];
+    HXLeadScorllVC *hxSVC = [[HXLeadScorllVC alloc]initWithImgNameArr:imgNameArr];
     
 //    3.1（在引导图控制器主页面上额外附加 辅助View，比如：按钮 Button，选加，可有可无）
     UIButton  *jumpButton = [[UIButton alloc]init];
@@ -62,20 +61,14 @@
 //    3.2（在引导图上额外附加 辅助View，比如：按钮 Button，选加，可有可无）
     UIButton *registerButton = [[UIButton alloc]init];
     registerButton.frame = CGRectMake(WIDTH*(imgNameArr.count-1)+(WIDTH-(WIDTH/1.74))/2.0,HEIGHT/1.22, WIDTH/1.74, 42.5);
-//    [registerButton setTitle:@"立即注册" forState:(UIControlStateNormal)];
-//    [registerButton setTitleColor:DFTColor(16, 152, 116) forState:(UIControlStateNormal)];
-//    [registerButton.layer setMasksToBounds:YES];
-//    [registerButton.layer setBorderWidth:2];
-//    [registerButton.layer setBorderColor:DFTColor(16, 152, 116).CGColor];
     [registerButton addTarget:self action:@selector(registerBtnAction) forControlEvents:(UIControlEventTouchUpInside)];
-
 //    在滑动引导图上额外附加 按钮
     [hxSVC.hxScrollView addSubview:registerButton];
     
     // 设置根视图控制器为 引导图控制器
     self.window.rootViewController = hxSVC;
     self.hxSVC = hxSVC;
-    //    }
+
     [self.window makeKeyAndVisible];
     
 }

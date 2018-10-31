@@ -10,7 +10,11 @@
 #import "CommunityCell.h"
 #import "CommunityModel.h"
 @interface CommunityVC ()<UITableViewDelegate,UITableViewDataSource>
-
+{
+    BOOL _herat;
+    CGFloat _receiveViewHeight;
+    NSIndexPath *_indexPath;
+}
 @property(strong,nonatomic)UITableView *tableView;
 @property(strong,nonatomic)NSMutableArray *dataModel;
 
@@ -52,6 +56,7 @@
                      @"name":@"会飞的鱼",
                      @"senderInfo":@"生死挈阔，与子成说：执子之手，与子偕老！",
                      @"time":@"25分钟前",
+                     @"heart":@"1",
                      @"imgArr":@[
                              @"社区图片01",
                              @"社区图片02",
@@ -64,6 +69,7 @@
                              @"小猪佩奇",
                              @"红果果",
                              @"小浣熊",
+                             @"本级用户",
                              @"漩涡鸣人",
                              @"路飞",
                              @"犬夜叉"
@@ -80,12 +86,15 @@
                      @"name":@"会跑的🐷",
                      @"senderInfo":@"生死挈阔，与子成说!",
                      @"time":@"30分钟前",
+                     @"heart":@"0",
                      @"imgArr":@[
                              @"社区图片01",
                              @"社区图片02",
                              @"社区图片03"
                              ].mutableCopy,
                      @"nameArr":@[
+                             @"小猪佩奇",
+                             @"路飞",
                              @"小猪佩奇",
                              @"路飞",
                              @"犬夜叉"
@@ -102,6 +111,7 @@
                      @"name":@"会跑的🐷",
                      @"senderInfo":@"生死挈阔，与子成说!",
                      @"time":@"30分钟前",
+                     @"heart":@"1",
                      @"imgArr":@[
                              @"社区图片01",
                              @"社区图片02",
@@ -247,15 +257,30 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     CommunityModel *model = _dataModel[indexPath.row];
-    NSLog(@"_dataModel=%@\n\nmodel=%@",_dataModel, model);
-    cell.comModel = model;
 
-    cell.heartClick = ^(BOOL heart){
-        NSLog(@"💓否？%d",heart);
+    cell.heartClick = ^(BOOL heart, CGFloat receiveViewHeight, NSMutableArray *nameArr){
+        _herat = heart;
+        _receiveViewHeight = receiveViewHeight;
+        _indexPath = indexPath;
+        model.nameArr = nameArr;
+        if (heart) {
+            model.heart = @"1";
+            [nameArr addObject:@"本级用户"];
+        } else {
+            model.heart = @"0";
+            [nameArr removeObject:@"本级用户"];
+        }
+
+        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+        NSLog(@"💓否？%d \nreceiveViewHeight=%f",heart, receiveViewHeight);
     };
     cell.commonClick = ^(){
         NSLog(@"评论评论");
     };
+    
+  
+    cell.comModel = model;
+    NSLog(@"_dataModel=%@\n\nmodel=%@",_dataModel, model);
     return cell;
 }
 
@@ -270,9 +295,9 @@
     if (comModel.imgArr.count == 0) {
         imgViewHeight = 0;
     } else if ((comModel.imgArr.count > 0) && (comModel.imgArr.count <= 3)){
-        imgViewHeight = imgHeight+60;
+        imgViewHeight = imgHeight+20;
     } else if ((comModel.imgArr.count > 3) && (comModel.imgArr.count <= 6)){
-        imgViewHeight = imgHeight*2+50;
+        imgViewHeight = imgHeight*2+30;
     } else {
         imgViewHeight = imgHeight*3+40;
     }
@@ -284,9 +309,15 @@
     }
     NSString *nextStr = [NSString stringWithFormat:@"等 %ld 人觉得很赞。",comModel.nameArr.count];
     NSString *receiveStr = [NSString stringWithFormat:@"%@%@",nameStr,nextStr];
-    CGFloat receiveViewHeight = [self textHeightFromeMode:receiveStr labelWidth:labelWidth];
+    CGFloat receiveLabelHeight = [self textHeightFromeMode:receiveStr labelWidth:WIDTH*3/5.0+30];
 
-    return 40+sendLabelHeight+imgViewHeight+40+receiveViewHeight+10;
+    if (_herat) {
+        if (indexPath.row == _indexPath.row) {
+            receiveLabelHeight = _receiveViewHeight;
+        }
+    }
+    // nameH + gap+sendH + gap+imgVH + gap+timeH +gap+receVH +gap
+    return 40+ 10+sendLabelHeight+ 10+imgViewHeight+ 10+21+ 10+receiveLabelHeight +10;
 }
 // 返回 label 高度
 - (CGFloat)textHeightFromeMode:(NSString *)text labelWidth:(CGFloat)labelWidth{
