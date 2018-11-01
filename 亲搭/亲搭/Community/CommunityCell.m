@@ -124,10 +124,10 @@
     //设置颜色
     [_receiveLabel setAttributedText:noteStr];
     
-    CGFloat receiveViewHeight = [self textHeightFromeMode:receiveStr labelWidth:WIDTH*3/5.0+30];
+    CGFloat receiveViewHeight = [self textHeightFromeMode:receiveStr labelWidth:WIDTH*3/5.0+20];
     // 设置 frame
-    _receiveView.frame = CGRectMake(CGRectGetMinX(_timeLabel.frame), CGRectGetMaxY(_timeLabel.frame)+9, WIDTH*3/5.0+40, receiveViewHeight+10);
-    _receiveLabel.frame = CGRectMake(5, 5, WIDTH*3/5.0+30, receiveViewHeight);
+    _receiveView.frame = CGRectMake(CGRectGetMinX(_timeLabel.frame), CGRectGetMaxY(_timeLabel.frame)+9, WIDTH*3/5.0+30, receiveViewHeight+10);
+    _receiveLabel.frame = CGRectMake(5, 5, WIDTH*3/5.0+20, receiveViewHeight);
 }
 
 // 返回 label 高度

@@ -35,11 +35,11 @@
     _tableView.rowHeight = UITableViewAutomaticDimension;
     [self.view addSubview:_tableView];
     // 搜索按钮
-    UIButton *serchBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 23, 23)];
+    UIButton *serchBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
     [serchBtn setBackgroundImage:[UIImage imageNamed:@"search_icon"] forState:UIControlStateNormal];
     [serchBtn addTarget:self action:@selector(searchAction) forControlEvents:UIControlEventTouchUpInside];
     // 添加按钮
-    UIButton *addBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 23, 23)];
+    UIButton *addBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
     [addBtn setBackgroundImage:[UIImage imageNamed:@"add_icon"] forState:UIControlStateNormal];
     [addBtn addTarget:self action:@selector(addAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *serchBtnItem = [[UIBarButtonItem alloc]initWithCustomView:serchBtn];
@@ -150,6 +150,12 @@
     [self creatUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    self.hidesBottomBarWhenPushed =NO;
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    self.hidesBottomBarWhenPushed =YES;
+}
 #pragma 搜索方法
 - (void)searchAction{
     NSLog(@"searchAction");
@@ -309,7 +315,7 @@
     }
     NSString *nextStr = [NSString stringWithFormat:@"等 %ld 人觉得很赞。",comModel.nameArr.count];
     NSString *receiveStr = [NSString stringWithFormat:@"%@%@",nameStr,nextStr];
-    CGFloat receiveLabelHeight = [self textHeightFromeMode:receiveStr labelWidth:WIDTH*3/5.0+30];
+    CGFloat receiveLabelHeight = [self textHeightFromeMode:receiveStr labelWidth:WIDTH*3/5.0+20];
 
     if (_herat) {
         if (indexPath.row == _indexPath.row) {

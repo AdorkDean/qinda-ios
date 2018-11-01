@@ -20,6 +20,13 @@
 		65139AD42187F55C004DDF80 /* ORCycleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AD32187F55C004DDF80 /* ORCycleLabel.m */; };
 		65139AD721882A82004DDF80 /* CommunityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AD621882A82004DDF80 /* CommunityModel.m */; };
 		65139ADA218841A3004DDF80 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AD9218841A3004DDF80 /* Foundation+Log.m */; };
+		65139ADD21899805004DDF80 /* MarriageRankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139ADC21899805004DDF80 /* MarriageRankVC.m */; };
+		65139AE0218A9594004DDF80 /* ReceiveMarriageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139ADF218A9594004DDF80 /* ReceiveMarriageVC.m */; };
+		65139AE4218A985D004DDF80 /* ReceiveMarriageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AE2218A985D004DDF80 /* ReceiveMarriageCell.m */; };
+		65139AE5218A985D004DDF80 /* ReceiveMarriageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65139AE3218A985D004DDF80 /* ReceiveMarriageCell.xib */; };
+		65139AE8218ADC88004DDF80 /* SendZhenghunRankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AE7218ADC88004DDF80 /* SendZhenghunRankVC.m */; };
+		65139AEC218AED3F004DDF80 /* RankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AEA218AED3F004DDF80 /* RankCell.m */; };
+		65139AED218AED3F004DDF80 /* RankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65139AEB218AED3F004DDF80 /* RankCell.xib */; };
 		655ABEBC216F34CA0067ED86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABEBB216F34CA0067ED86 /* main.m */; };
 		655ABEBF216F34CA0067ED86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABEBE216F34CA0067ED86 /* AppDelegate.m */; };
 		655ABEC2216F34CA0067ED86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABEC1216F34CA0067ED86 /* ViewController.m */; };
@@ -80,6 +87,18 @@
 		65139AD521882A82004DDF80 /* CommunityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityModel.h; sourceTree = "<group>"; };
 		65139AD621882A82004DDF80 /* CommunityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityModel.m; sourceTree = "<group>"; };
 		65139AD9218841A3004DDF80 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		65139ADB21899805004DDF80 /* MarriageRankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarriageRankVC.h; sourceTree = "<group>"; };
+		65139ADC21899805004DDF80 /* MarriageRankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarriageRankVC.m; sourceTree = "<group>"; };
+		65139ADE218A9594004DDF80 /* ReceiveMarriageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveMarriageVC.h; sourceTree = "<group>"; };
+		65139ADF218A9594004DDF80 /* ReceiveMarriageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveMarriageVC.m; sourceTree = "<group>"; };
+		65139AE1218A985D004DDF80 /* ReceiveMarriageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveMarriageCell.h; sourceTree = "<group>"; };
+		65139AE2218A985D004DDF80 /* ReceiveMarriageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveMarriageCell.m; sourceTree = "<group>"; };
+		65139AE3218A985D004DDF80 /* ReceiveMarriageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiveMarriageCell.xib; sourceTree = "<group>"; };
+		65139AE6218ADC88004DDF80 /* SendZhenghunRankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendZhenghunRankVC.h; sourceTree = "<group>"; };
+		65139AE7218ADC88004DDF80 /* SendZhenghunRankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendZhenghunRankVC.m; sourceTree = "<group>"; };
+		65139AE9218AED3F004DDF80 /* RankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankCell.h; sourceTree = "<group>"; };
+		65139AEA218AED3F004DDF80 /* RankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankCell.m; sourceTree = "<group>"; };
+		65139AEB218AED3F004DDF80 /* RankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankCell.xib; sourceTree = "<group>"; };
 		655ABEB7216F34CA0067ED86 /* 亲搭.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "亲搭.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		655ABEBB216F34CA0067ED86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		655ABEBD216F34CA0067ED86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -243,6 +262,12 @@
 		65139ABA217DA1EE004DDF80 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				65139ADE218A9594004DDF80 /* ReceiveMarriageVC.h */,
+				65139ADF218A9594004DDF80 /* ReceiveMarriageVC.m */,
+				65139ADB21899805004DDF80 /* MarriageRankVC.h */,
+				65139ADC21899805004DDF80 /* MarriageRankVC.m */,
+				65139AE6218ADC88004DDF80 /* SendZhenghunRankVC.h */,
+				65139AE7218ADC88004DDF80 /* SendZhenghunRankVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +282,12 @@
 		65139ABC217DA1EE004DDF80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				65139AE1218A985D004DDF80 /* ReceiveMarriageCell.h */,
+				65139AE2218A985D004DDF80 /* ReceiveMarriageCell.m */,
+				65139AE3218A985D004DDF80 /* ReceiveMarriageCell.xib */,
+				65139AE9218AED3F004DDF80 /* RankCell.h */,
+				65139AEA218AED3F004DDF80 /* RankCell.m */,
+				65139AEB218AED3F004DDF80 /* RankCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -578,7 +609,9 @@
 			files = (
 				655ABF1D216F409F0067ED86 /* yindao1.jpg in Resources */,
 				655ABECA216F34CA0067ED86 /* LaunchScreen.storyboard in Resources */,
+				65139AED218AED3F004DDF80 /* RankCell.xib in Resources */,
 				655ABEC7216F34CA0067ED86 /* Assets.xcassets in Resources */,
+				65139AE5218A985D004DDF80 /* ReceiveMarriageCell.xib in Resources */,
 				65139AC421801820004DDF80 /* MakeFriendsCell.xib in Resources */,
 				655ABF1E216F409F0067ED86 /* yindao2.jpg in Resources */,
 				655ABEC5216F34CA0067ED86 /* Main.storyboard in Resources */,
@@ -608,21 +641,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65139AE8218ADC88004DDF80 /* SendZhenghunRankVC.m in Sources */,
 				655ABF28216F41560067ED86 /* MyVC.m in Sources */,
 				655ABEC2216F34CA0067ED86 /* ViewController.m in Sources */,
 				65139AA4217967D4004DDF80 /* HXLostPassWordVC.m in Sources */,
 				65139ACD2181A701004DDF80 /* CommunityCell.m in Sources */,
+				65139ADD21899805004DDF80 /* MarriageRankVC.m in Sources */,
 				65139AD42187F55C004DDF80 /* ORCycleLabel.m in Sources */,
 				65139AD721882A82004DDF80 /* CommunityModel.m in Sources */,
 				655ABF33217091720067ED86 /* HXLoginVC.m in Sources */,
 				655ABF1C216F409F0067ED86 /* HXLeadScorllVC.m in Sources */,
+				65139AEC218AED3F004DDF80 /* RankCell.m in Sources */,
 				65139ADA218841A3004DDF80 /* Foundation+Log.m in Sources */,
 				655ABF22216F41330067ED86 /* CommunityVC.m in Sources */,
+				65139AE4218A985D004DDF80 /* ReceiveMarriageCell.m in Sources */,
 				65139A99217862E1004DDF80 /* MBProgressHUD+NJ.m in Sources */,
 				65139AC321801820004DDF80 /* MakeFriendsCell.m in Sources */,
 				65139AB0217D68B4004DDF80 /* HXRegisterVC.m in Sources */,
 				655ABF25216F41430067ED86 /* NewFindVC.m in Sources */,
 				655ABEBF216F34CA0067ED86 /* AppDelegate.m in Sources */,
+				65139AE0218A9594004DDF80 /* ReceiveMarriageVC.m in Sources */,
 				655ABF1F216F409F0067ED86 /* MakeFriendsVC.m in Sources */,
 				655ABF37217098260067ED86 /* HXNavigationVC.m in Sources */,
 				65139A98217862E1004DDF80 /* HUD.m in Sources */,

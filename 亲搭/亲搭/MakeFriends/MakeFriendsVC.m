@@ -10,13 +10,15 @@
 #import "MakeFriendsCell.h"
 #import "ORCycleLabel.h"
 
+#import "ReceiveMarriageVC.h"
+#import "MarriageRankVC.h"
 @interface MakeFriendsVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(strong,nonatomic)UITableView *tableView;
-@property(strong,nonatomic)UILabel *todyMarriage;
-@property(strong,nonatomic)UILabel *myMarriage;
-@property(strong,nonatomic)UILabel *receiveMarriage;
-@property(strong,nonatomic)UILabel *marriageRank;
+@property(strong,nonatomic)UILabel *todyMarriage;// 今日征婚
+@property(strong,nonatomic)UILabel *myMarriage;// 我的征婚
+@property(strong,nonatomic)UILabel *receiveMarriage;// 对我征婚
+@property(strong,nonatomic)UILabel *marriageRank;// 排行榜
 
 @property(strong,nonatomic)UIImageView *marrySortImg;
 @property(strong,nonatomic)UIImageView *distanceSortImg;
@@ -43,6 +45,12 @@
     [self creatUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    self.hidesBottomBarWhenPushed =NO;
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    self.hidesBottomBarWhenPushed =YES;
+}
 - (void)creatUI{
     CGFloat itemWidth = (WIDTH-20)/4.0;
     
@@ -166,7 +174,7 @@
 
     return subTieleLabel;
 }
-
+// 绘制筛选条件 按匹配 按距离
 - (UIView *)creatTopNavigationViewWidthFrame:(CGRect)frame{
     CGFloat itemWidth = frame.size.width/2.0;
     UIView *cotainerView = [[UIView alloc]initWithFrame:frame];
@@ -202,6 +210,7 @@
     
     return cotainerView;
 }
+// 点击筛选条件 按匹配 或 按距离
 - (void)clickBarLabel:(UITapGestureRecognizer *)sender{
     NSUInteger itemIndex = sender.view.tag-3000;
     if (itemIndex == 0) {
@@ -228,11 +237,14 @@
 }
 
 - (void)receiveMarriageAction{
+    ReceiveMarriageVC *recVC = [[ReceiveMarriageVC alloc]init];
+    [self.navigationController pushViewController:recVC animated:YES];
     NSLog(@"对我征婚");
 }
 
 - (void)marriageAction{
-    
+    MarriageRankVC *rankVC = [[MarriageRankVC alloc]init];
+    [self.navigationController pushViewController:rankVC animated:YES];
     NSLog(@"排行榜");
 }
 
