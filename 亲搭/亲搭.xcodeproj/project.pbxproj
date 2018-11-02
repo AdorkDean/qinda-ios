@@ -27,6 +27,15 @@
 		65139AE8218ADC88004DDF80 /* SendZhenghunRankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AE7218ADC88004DDF80 /* SendZhenghunRankVC.m */; };
 		65139AEC218AED3F004DDF80 /* RankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AEA218AED3F004DDF80 /* RankCell.m */; };
 		65139AED218AED3F004DDF80 /* RankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65139AEB218AED3F004DDF80 /* RankCell.xib */; };
+		65139AF4218BE39E004DDF80 /* HXGetLabelWidthOrHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AF3218BE39E004DDF80 /* HXGetLabelWidthOrHeight.m */; };
+		65139AF7218BEA3A004DDF80 /* RankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AF6218BEA3A004DDF80 /* RankModel.m */; };
+		65139AFA218C2568004DDF80 /* GetZhenghunRankIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AF9218C2568004DDF80 /* GetZhenghunRankIVC.m */; };
+		65139AFD218C2582004DDF80 /* HeartRankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AFC218C2582004DDF80 /* HeartRankVC.m */; };
+		65139B00218C2595004DDF80 /* SendGiftRankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139AFF218C2595004DDF80 /* SendGiftRankVC.m */; };
+		65139B03218C25A8004DDF80 /* GetGiftRankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139B02218C25A8004DDF80 /* GetGiftRankVC.m */; };
+		65139B06218C25B9004DDF80 /* SendTieRankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139B05218C25B9004DDF80 /* SendTieRankVC.m */; };
+		65139B09218C25CA004DDF80 /* GetZanRankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139B08218C25CA004DDF80 /* GetZanRankVC.m */; };
+		65139B10218C3A38004DDF80 /* FilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139B0F218C3A38004DDF80 /* FilterVC.m */; };
 		655ABEBC216F34CA0067ED86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABEBB216F34CA0067ED86 /* main.m */; };
 		655ABEBF216F34CA0067ED86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABEBE216F34CA0067ED86 /* AppDelegate.m */; };
 		655ABEC2216F34CA0067ED86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABEC1216F34CA0067ED86 /* ViewController.m */; };
@@ -99,6 +108,24 @@
 		65139AE9218AED3F004DDF80 /* RankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankCell.h; sourceTree = "<group>"; };
 		65139AEA218AED3F004DDF80 /* RankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankCell.m; sourceTree = "<group>"; };
 		65139AEB218AED3F004DDF80 /* RankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankCell.xib; sourceTree = "<group>"; };
+		65139AF2218BE39E004DDF80 /* HXGetLabelWidthOrHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXGetLabelWidthOrHeight.h; sourceTree = "<group>"; };
+		65139AF3218BE39E004DDF80 /* HXGetLabelWidthOrHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXGetLabelWidthOrHeight.m; sourceTree = "<group>"; };
+		65139AF5218BEA3A004DDF80 /* RankModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankModel.h; sourceTree = "<group>"; };
+		65139AF6218BEA3A004DDF80 /* RankModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankModel.m; sourceTree = "<group>"; };
+		65139AF8218C2568004DDF80 /* GetZhenghunRankIVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetZhenghunRankIVC.h; sourceTree = "<group>"; };
+		65139AF9218C2568004DDF80 /* GetZhenghunRankIVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetZhenghunRankIVC.m; sourceTree = "<group>"; };
+		65139AFB218C2582004DDF80 /* HeartRankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartRankVC.h; sourceTree = "<group>"; };
+		65139AFC218C2582004DDF80 /* HeartRankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartRankVC.m; sourceTree = "<group>"; };
+		65139AFE218C2595004DDF80 /* SendGiftRankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendGiftRankVC.h; sourceTree = "<group>"; };
+		65139AFF218C2595004DDF80 /* SendGiftRankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendGiftRankVC.m; sourceTree = "<group>"; };
+		65139B01218C25A8004DDF80 /* GetGiftRankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetGiftRankVC.h; sourceTree = "<group>"; };
+		65139B02218C25A8004DDF80 /* GetGiftRankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetGiftRankVC.m; sourceTree = "<group>"; };
+		65139B04218C25B9004DDF80 /* SendTieRankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendTieRankVC.h; sourceTree = "<group>"; };
+		65139B05218C25B9004DDF80 /* SendTieRankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendTieRankVC.m; sourceTree = "<group>"; };
+		65139B07218C25CA004DDF80 /* GetZanRankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetZanRankVC.h; sourceTree = "<group>"; };
+		65139B08218C25CA004DDF80 /* GetZanRankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetZanRankVC.m; sourceTree = "<group>"; };
+		65139B0E218C3A38004DDF80 /* FilterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterVC.h; sourceTree = "<group>"; };
+		65139B0F218C3A38004DDF80 /* FilterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterVC.m; sourceTree = "<group>"; };
 		655ABEB7216F34CA0067ED86 /* 亲搭.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "亲搭.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		655ABEBB216F34CA0067ED86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		655ABEBD216F34CA0067ED86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -262,12 +289,9 @@
 		65139ABA217DA1EE004DDF80 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				65139ADE218A9594004DDF80 /* ReceiveMarriageVC.h */,
-				65139ADF218A9594004DDF80 /* ReceiveMarriageVC.m */,
-				65139ADB21899805004DDF80 /* MarriageRankVC.h */,
-				65139ADC21899805004DDF80 /* MarriageRankVC.m */,
-				65139AE6218ADC88004DDF80 /* SendZhenghunRankVC.h */,
-				65139AE7218ADC88004DDF80 /* SendZhenghunRankVC.m */,
+				65139B0D218C39D6004DDF80 /* 筛选 */,
+				65139B0C218C3847004DDF80 /* 对我征婚 */,
+				65139B0B218C382D004DDF80 /* 排行榜 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,6 +299,8 @@
 		65139ABB217DA1EE004DDF80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				65139AF5218BEA3A004DDF80 /* RankModel.h */,
+				65139AF6218BEA3A004DDF80 /* RankModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +343,56 @@
 				65139AD9218841A3004DDF80 /* Foundation+Log.m */,
 			);
 			path = "打印转汉字";
+			sourceTree = "<group>";
+		};
+		65139AF1218BE39E004DDF80 /* HXGetLabelWidthOrHeight */ = {
+			isa = PBXGroup;
+			children = (
+				65139AF2218BE39E004DDF80 /* HXGetLabelWidthOrHeight.h */,
+				65139AF3218BE39E004DDF80 /* HXGetLabelWidthOrHeight.m */,
+			);
+			path = HXGetLabelWidthOrHeight;
+			sourceTree = "<group>";
+		};
+		65139B0B218C382D004DDF80 /* 排行榜 */ = {
+			isa = PBXGroup;
+			children = (
+				65139ADB21899805004DDF80 /* MarriageRankVC.h */,
+				65139ADC21899805004DDF80 /* MarriageRankVC.m */,
+				65139AE6218ADC88004DDF80 /* SendZhenghunRankVC.h */,
+				65139AE7218ADC88004DDF80 /* SendZhenghunRankVC.m */,
+				65139AF8218C2568004DDF80 /* GetZhenghunRankIVC.h */,
+				65139AF9218C2568004DDF80 /* GetZhenghunRankIVC.m */,
+				65139AFB218C2582004DDF80 /* HeartRankVC.h */,
+				65139AFC218C2582004DDF80 /* HeartRankVC.m */,
+				65139AFE218C2595004DDF80 /* SendGiftRankVC.h */,
+				65139AFF218C2595004DDF80 /* SendGiftRankVC.m */,
+				65139B01218C25A8004DDF80 /* GetGiftRankVC.h */,
+				65139B02218C25A8004DDF80 /* GetGiftRankVC.m */,
+				65139B04218C25B9004DDF80 /* SendTieRankVC.h */,
+				65139B05218C25B9004DDF80 /* SendTieRankVC.m */,
+				65139B07218C25CA004DDF80 /* GetZanRankVC.h */,
+				65139B08218C25CA004DDF80 /* GetZanRankVC.m */,
+			);
+			name = "排行榜";
+			sourceTree = "<group>";
+		};
+		65139B0C218C3847004DDF80 /* 对我征婚 */ = {
+			isa = PBXGroup;
+			children = (
+				65139ADE218A9594004DDF80 /* ReceiveMarriageVC.h */,
+				65139ADF218A9594004DDF80 /* ReceiveMarriageVC.m */,
+			);
+			name = "对我征婚";
+			sourceTree = "<group>";
+		};
+		65139B0D218C39D6004DDF80 /* 筛选 */ = {
+			isa = PBXGroup;
+			children = (
+				65139B0E218C3A38004DDF80 /* FilterVC.h */,
+				65139B0F218C3A38004DDF80 /* FilterVC.m */,
+			);
+			name = "筛选";
 			sourceTree = "<group>";
 		};
 		655ABEAE216F34CA0067ED86 = {
@@ -407,6 +483,7 @@
 		655ABF0E216F409F0067ED86 /* HXTools */ = {
 			isa = PBXGroup;
 			children = (
+				65139AF1218BE39E004DDF80 /* HXGetLabelWidthOrHeight */,
 				655ABF0F216F409F0067ED86 /* HXLeaderVC */,
 				655ABF34217097FC0067ED86 /* HXNavigationVC */,
 				655ABF2C216F4B250067ED86 /* HXTabBarVC */,
@@ -642,14 +719,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				65139AE8218ADC88004DDF80 /* SendZhenghunRankVC.m in Sources */,
+				65139B09218C25CA004DDF80 /* GetZanRankVC.m in Sources */,
 				655ABF28216F41560067ED86 /* MyVC.m in Sources */,
 				655ABEC2216F34CA0067ED86 /* ViewController.m in Sources */,
 				65139AA4217967D4004DDF80 /* HXLostPassWordVC.m in Sources */,
+				65139B10218C3A38004DDF80 /* FilterVC.m in Sources */,
 				65139ACD2181A701004DDF80 /* CommunityCell.m in Sources */,
 				65139ADD21899805004DDF80 /* MarriageRankVC.m in Sources */,
+				65139B06218C25B9004DDF80 /* SendTieRankVC.m in Sources */,
 				65139AD42187F55C004DDF80 /* ORCycleLabel.m in Sources */,
 				65139AD721882A82004DDF80 /* CommunityModel.m in Sources */,
+				65139B03218C25A8004DDF80 /* GetGiftRankVC.m in Sources */,
 				655ABF33217091720067ED86 /* HXLoginVC.m in Sources */,
+				65139AF4218BE39E004DDF80 /* HXGetLabelWidthOrHeight.m in Sources */,
 				655ABF1C216F409F0067ED86 /* HXLeadScorllVC.m in Sources */,
 				65139AEC218AED3F004DDF80 /* RankCell.m in Sources */,
 				65139ADA218841A3004DDF80 /* Foundation+Log.m in Sources */,
@@ -657,10 +739,14 @@
 				65139AE4218A985D004DDF80 /* ReceiveMarriageCell.m in Sources */,
 				65139A99217862E1004DDF80 /* MBProgressHUD+NJ.m in Sources */,
 				65139AC321801820004DDF80 /* MakeFriendsCell.m in Sources */,
+				65139AFA218C2568004DDF80 /* GetZhenghunRankIVC.m in Sources */,
 				65139AB0217D68B4004DDF80 /* HXRegisterVC.m in Sources */,
 				655ABF25216F41430067ED86 /* NewFindVC.m in Sources */,
+				65139AF7218BEA3A004DDF80 /* RankModel.m in Sources */,
+				65139B00218C2595004DDF80 /* SendGiftRankVC.m in Sources */,
 				655ABEBF216F34CA0067ED86 /* AppDelegate.m in Sources */,
 				65139AE0218A9594004DDF80 /* ReceiveMarriageVC.m in Sources */,
+				65139AFD218C2582004DDF80 /* HeartRankVC.m in Sources */,
 				655ABF1F216F409F0067ED86 /* MakeFriendsVC.m in Sources */,
 				655ABF37217098260067ED86 /* HXNavigationVC.m in Sources */,
 				65139A98217862E1004DDF80 /* HUD.m in Sources */,

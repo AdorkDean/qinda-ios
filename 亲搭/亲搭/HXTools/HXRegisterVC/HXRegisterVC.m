@@ -97,7 +97,7 @@
     UIView *aloneView = [self creatSelectViewWithTitle:@"是否单身" itemArr:@[@"是",@"否"] marginLeft:0 marginTop: CGRectGetMaxY(sexTypeView.frame)+10 containViewWidth:WIDTH-21 action:@selector(changeAlone:) selectImgType:@"alone"];
     [_containScrollView addSubview:aloneView];
     
-    // 登录按钮
+    // 注册按钮
     CGFloat loginBtnWidth = (WIDTH-50)/2.0;
     UIButton *registerBtn = [[UIButton alloc]initWithFrame:CGRectMake(26, CGRectGetMaxY(aloneView.frame)+10, loginBtnWidth*2-22, 40)];
     registerBtn.layer.borderColor = MainColor.CGColor;

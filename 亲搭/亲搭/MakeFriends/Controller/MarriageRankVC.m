@@ -8,6 +8,12 @@
 
 #import "MarriageRankVC.h"
 #import "SendZhenghunRankVC.h"
+#import "GetZhenghunRankIVC.h"
+#import "HeartRankVC.h"
+#import "SendGiftRankVC.h"
+#import "GetGiftRankVC.h"
+#import "SendTieRankVC.h"
+#import "GetZanRankVC.h"
 @interface MarriageRankVC ()<UIScrollViewDelegate>
 @property(nonatomic,strong)UIScrollView *containScrollView;
 
@@ -35,6 +41,7 @@
 
     [self drawUI];
 }
+
 - (void)drawUI{
     CGFloat itemWidth = WIDTH-20;
     UIView *sendZhenghunRankItem = [self creatClickItemView:CGRectMake(10, 2, itemWidth, 50) title:@"征婚排行榜" action:@selector(rankAction:) tag:3300];
@@ -49,10 +56,10 @@
     UIView *sendGiftRankItem = [self creatClickItemView:CGRectMake(10, CGRectGetMaxY(heartRankItem.frame)+2, itemWidth, 50) title:@"送礼排行榜" action:@selector(rankAction:) tag:3303];
     [_containScrollView addSubview:sendGiftRankItem];
 
-    UIView *getGiftzhenghunRankItem = [self creatClickItemView:CGRectMake(10, CGRectGetMaxY(sendGiftRankItem.frame)+2, itemWidth, 50) title:@"收礼排行榜" action:@selector(rankAction:) tag:3304];
-    [_containScrollView addSubview:getGiftzhenghunRankItem];
+    UIView *getGiftRankItem = [self creatClickItemView:CGRectMake(10, CGRectGetMaxY(sendGiftRankItem.frame)+2, itemWidth, 50) title:@"收礼排行榜" action:@selector(rankAction:) tag:3304];
+    [_containScrollView addSubview:getGiftRankItem];
 
-    UIView *sendTieRankItem = [self creatClickItemView:CGRectMake(10, CGRectGetMaxY(getGiftzhenghunRankItem.frame)+2, itemWidth, 50) title:@"发帖排行榜" action:@selector(rankAction:) tag:3305];
+    UIView *sendTieRankItem = [self creatClickItemView:CGRectMake(10, CGRectGetMaxY(getGiftRankItem.frame)+2, itemWidth, 50) title:@"发帖排行榜" action:@selector(rankAction:) tag:3305];
     [_containScrollView addSubview:sendTieRankItem];
 
     UIView *getZanRankItem = [self creatClickItemView:CGRectMake(10, CGRectGetMaxY(sendTieRankItem.frame)+2, itemWidth, 50) title:@"被赞排行榜" action:@selector(rankAction:) tag:3306];
@@ -90,17 +97,23 @@
         SendZhenghunRankVC *sendVC = [SendZhenghunRankVC new];
         [self.navigationController pushViewController:sendVC animated:YES];
     } else if (sender.tag == 3301) {
-        
+        GetZhenghunRankIVC *sendVC = [GetZhenghunRankIVC new];
+        [self.navigationController pushViewController:sendVC animated:YES];
     } else if (sender.tag == 3302) {
-        
+        HeartRankVC *sendVC = [HeartRankVC new];
+        [self.navigationController pushViewController:sendVC animated:YES];
     } else if (sender.tag == 3303) {
-        
+        SendGiftRankVC *sendVC = [SendGiftRankVC new];
+        [self.navigationController pushViewController:sendVC animated:YES];
     } else if (sender.tag == 3304) {
-        
+        GetGiftRankVC *sendVC = [GetGiftRankVC new];
+        [self.navigationController pushViewController:sendVC animated:YES];
     } else if (sender.tag == 3305) {
-        
+        SendTieRankVC *sendVC = [SendTieRankVC new];
+        [self.navigationController pushViewController:sendVC animated:YES];
     } else if (sender.tag == 3306) {
-        
+        GetZanRankVC *sendVC = [GetZanRankVC new];
+        [self.navigationController pushViewController:sendVC animated:YES];
     }
     NSLog(@"%ld",(long)sender.tag);
 }

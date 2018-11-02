@@ -23,6 +23,6 @@
 #define TextGrayColor DFTColor(156, 156, 156)
 
 #import "MBProgressHUD+NJ.h"
-
+#import "HXGetLabelWidthOrHeight.h"
 
 #endif /* PrefixHeader_pch */

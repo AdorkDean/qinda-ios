@@ -34,4 +34,26 @@
     // Configure the view for the selected state
 }
 
+- (void)setModel:(RankModel *)model{
+    if (!_model) {
+        _model = model;
+    }
+    if ([_model.rankNum isEqualToString:@"1"]) {
+        _rankLabel.text = @"";
+    } else {
+        _rankImgView.image = [UIImage imageNamed:@""];
+        _rankLabel.text = _model.rankNum;
+    }
+    // 头像
+    _headImgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",_model.headerImg]];
+    // 性别
+    NSString *sexName = [_model.sex isEqualToString:@"man"] ? @"man_sex" : @"woman_sex";
+    _sexImgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",sexName]];
+    // 名字
+    _nameLabel.text = _model.name;
+    // 地址
+    _locationLabel.text = _model.location;
+    // 成绩
+    _getZanLabel.text = _model.sumInfo;
+}
 @end

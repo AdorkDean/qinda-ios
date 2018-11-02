@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "RankModel.h"
 @interface RankCell : UITableViewCell
+
+@property(strong,nonatomic)RankModel *model;
 
 @end

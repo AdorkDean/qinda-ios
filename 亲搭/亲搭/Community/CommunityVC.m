@@ -151,11 +151,9 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    self.hidesBottomBarWhenPushed =NO;
+    self.tabBarController.tabBar.hidden = NO;
 }
-- (void)viewWillDisappear:(BOOL)animated{
-    self.hidesBottomBarWhenPushed =YES;
-}
+
 #pragma 搜索方法
 - (void)searchAction{
     NSLog(@"searchAction");

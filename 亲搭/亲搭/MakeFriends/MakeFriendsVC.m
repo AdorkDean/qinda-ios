@@ -12,6 +12,7 @@
 
 #import "ReceiveMarriageVC.h"
 #import "MarriageRankVC.h"
+#import "FilterVC.h"
 @interface MakeFriendsVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(strong,nonatomic)UITableView *tableView;
@@ -46,11 +47,9 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    self.hidesBottomBarWhenPushed =NO;
+    self.tabBarController.tabBar.hidden = NO;
 }
-- (void)viewWillDisappear:(BOOL)animated{
-    self.hidesBottomBarWhenPushed =YES;
-}
+
 - (void)creatUI{
     CGFloat itemWidth = (WIDTH-20)/4.0;
     
@@ -238,17 +237,22 @@
 
 - (void)receiveMarriageAction{
     ReceiveMarriageVC *recVC = [[ReceiveMarriageVC alloc]init];
+    self.tabBarController.tabBar.hidden = YES;
     [self.navigationController pushViewController:recVC animated:YES];
     NSLog(@"对我征婚");
 }
 
 - (void)marriageAction{
     MarriageRankVC *rankVC = [[MarriageRankVC alloc]init];
+    self.tabBarController.tabBar.hidden = YES;
     [self.navigationController pushViewController:rankVC animated:YES];
     NSLog(@"排行榜");
 }
 
 - (void)siftAction{
+    FilterVC *filterVC = [FilterVC new];
+    self.tabBarController.tabBar.hidden = YES;
+    [self.navigationController pushViewController:filterVC animated:YES];
     NSLog(@"筛选筛选");
 }
 
