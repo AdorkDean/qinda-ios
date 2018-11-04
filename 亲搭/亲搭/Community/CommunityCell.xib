@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -18,20 +18,20 @@
             <rect key="frame" x="0.0" y="0.0" width="373" height="318"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="373" height="318"/>
+                <rect key="frame" x="0.0" y="0.0" width="373" height="317.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgT-ai-3EY">
-                        <rect key="frame" x="11" y="8" width="351" height="301.5"/>
+                        <rect key="frame" x="10" y="11" width="353" height="296"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="KED-8f-qxf">
-                                <rect key="frame" x="5" y="10" width="56" height="56"/>
+                                <rect key="frame" x="5" y="10" width="55.5" height="55.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KED-8f-qxf" secondAttribute="height" id="Ydv-0p-XsW"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会飞的鱼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80g-G3-rVe">
-                                <rect key="frame" x="71" y="10" width="260" height="21"/>
+                                <rect key="frame" x="70.5" y="10" width="262.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ObD-LI-rqE"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生死挈阔，与子成说：执子之手，与子偕老！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzN-TB-lc4">
-                                <rect key="frame" x="71" y="41" width="210" height="21"/>
+                                <rect key="frame" x="70.5" y="41" width="212" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -105,8 +105,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="qgT-ai-3EY" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Lss-oM-iVH"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="qgT-ai-3EY" secondAttribute="trailing" constant="3" id="UKN-tU-ZPH"/>
-                    <constraint firstItem="qgT-ai-3EY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="3" id="WqQ-qs-XQa"/>
+                    <constraint firstItem="qgT-ai-3EY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="WyQ-pc-ZWl"/>
+                    <constraint firstAttribute="trailing" secondItem="qgT-ai-3EY" secondAttribute="trailing" constant="10" id="awr-L1-IGx"/>
                     <constraint firstItem="qgT-ai-3EY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="p5w-zF-U3Y"/>
                 </constraints>
             </tableViewCellContentView>
@@ -121,7 +121,7 @@
                 <outlet property="senderInfoLabel" destination="BzN-TB-lc4" id="oDr-KP-Zby"/>
                 <outlet property="timeLabel" destination="pBS-5Z-1zE" id="GfZ-q2-YLS"/>
             </connections>
-            <point key="canvasLocation" x="207" y="114"/>
+            <point key="canvasLocation" x="89.5" y="97"/>
         </tableViewCell>
     </objects>
     <resources>

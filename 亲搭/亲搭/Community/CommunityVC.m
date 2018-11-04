@@ -31,22 +31,35 @@
     _tableView.dataSource = self;
     self.view.backgroundColor = DFTColor(240, 240, 240);
     _tableView.backgroundColor = DFTColor(240, 240, 240);
-    _tableView.estimatedRowHeight = 85;
-    _tableView.rowHeight = UITableViewAutomaticDimension;
     [self.view addSubview:_tableView];
     // 搜索按钮
     UIButton *serchBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
-    [serchBtn setBackgroundImage:[UIImage imageNamed:@"search_icon"] forState:UIControlStateNormal];
     [serchBtn addTarget:self action:@selector(searchAction) forControlEvents:UIControlEventTouchUpInside];
     // 添加按钮
     UIButton *addBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
-    [addBtn setBackgroundImage:[UIImage imageNamed:@"add_icon"] forState:UIControlStateNormal];
     [addBtn addTarget:self action:@selector(addAction) forControlEvents:UIControlEventTouchUpInside];
+// UIBarButtonItem 适配 iOS 11.0系统
+#ifdef __IPHONE_9_0
+    if ([serchBtn respondsToSelector:@selector(widthAnchor)]) {
+        [serchBtn.widthAnchor constraintEqualToConstant:22].active = YES;
+    }
+    if ([serchBtn respondsToSelector:@selector(heightAnchor)]) {
+        [serchBtn.heightAnchor constraintEqualToConstant:22].active = YES;
+    }
+    if ([addBtn respondsToSelector:@selector(widthAnchor)]) {
+        [addBtn.widthAnchor constraintEqualToConstant:22].active = YES;
+    }
+    if ([addBtn respondsToSelector:@selector(heightAnchor)]) {
+        [addBtn.heightAnchor constraintEqualToConstant:22].active = YES;
+    }
+#endif
+    [serchBtn setBackgroundImage:[UIImage imageNamed:@"search_icon"] forState:UIControlStateNormal];
+    [addBtn setBackgroundImage:[UIImage imageNamed:@"add_icon"] forState:UIControlStateNormal];
+
     UIBarButtonItem *serchBtnItem = [[UIBarButtonItem alloc]initWithCustomView:serchBtn];
     UIBarButtonItem *addBtnItem = [[UIBarButtonItem alloc]initWithCustomView:addBtn];
     self.navigationItem.rightBarButtonItems = @[addBtnItem,serchBtnItem];
-    
-    
+
     // 模拟数据
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     _dataModel = [NSMutableArray array];

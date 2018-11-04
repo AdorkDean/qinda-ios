@@ -8,8 +8,11 @@
 //
 
 #import "FilterVC.h"
-
-@interface FilterVC ()<UIScrollViewDelegate>
+#import "FilePickerView.h"
+@interface FilterVC ()<UIScrollViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+{
+    FilePickerView *_pikerView;
+}
 @property(nonatomic,strong)UIScrollView *containScrollView;
 
 @property(strong,nonatomic)UILabel *ageLabel;
@@ -17,7 +20,7 @@
 @property(strong,nonatomic)UILabel *academicLabel;
 @property(strong,nonatomic)UILabel *incomeLabel;
 @property(strong,nonatomic)UILabel *locationLabel;
-
+@property(strong,nonatomic)UIPickerView *pickerView;
 @end
 
 @implementation FilterVC
@@ -26,6 +29,14 @@
     [super viewDidLoad];
     self.navigationItem.title = @"会员筛选";
     UIButton *leftBtnView = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+#ifdef __IPHONE_9_0
+    if ([leftBtnView respondsToSelector:@selector(widthAnchor)]) {
+        [leftBtnView.widthAnchor constraintEqualToConstant:22].active = YES;
+    }
+    if ([leftBtnView respondsToSelector:@selector(heightAnchor)]) {
+        [leftBtnView.heightAnchor constraintEqualToConstant:22].active = YES;
+    }
+#endif
     [leftBtnView setBackgroundImage:[UIImage imageNamed:@"left-back"] forState:UIControlStateNormal];
     [leftBtnView addTarget:self action:@selector(leftAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc]initWithCustomView:leftBtnView];
@@ -88,6 +99,11 @@
     NSLog(@"筛选条件%ld",sender.tag);
     if (sender.tag == 3400) {
         _ageLabel.text = @"18岁";
+        
+        _pikerView = [FilePickerView instanceDatePickerView];
+        _pikerView.frame = self.view.bounds;
+        _pikerView.backgroundColor = HXColorA(0, 0, 0, 0.2);
+        [self.view addSubview:_pikerView];
     } else if (sender.tag == 3401) {
         _heightLabel.text = @"175cm";
     } else if (sender.tag == 3402) {

@@ -100,7 +100,7 @@
     // 设置 _timeLabel _commonBtn _heartBtn 的 frame
     _timeLabel.frame = CGRectMake(CGRectGetMinX(_imgsView.frame), CGRectGetMaxY(_imgsView.frame)+10, WIDTH/2.0, 21);
     _commonBtn.frame = CGRectMake(WIDTH-50, CGRectGetMaxY(_imgsView.frame)+10, 20, 20);
-    _heartBtn.frame = CGRectMake(WIDTH-90, CGRectGetMaxY(_imgsView.frame)+10, 20, 20);
+    _heartBtn.frame = CGRectMake(WIDTH- 90, CGRectGetMaxY(_imgsView.frame)+10, 20, 20);
     
     // 绘制点赞 label
     [self drowReceiveViewWith:comModel.nameArr];

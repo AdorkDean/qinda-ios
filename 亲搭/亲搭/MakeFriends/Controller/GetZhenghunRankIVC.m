@@ -23,6 +23,14 @@
     
     self.navigationItem.title = @"排行榜";
     UIButton *leftBtnView = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
+#ifdef __IPHONE_9_0
+    if ([leftBtnView respondsToSelector:@selector(widthAnchor)]) {
+        [leftBtnView.widthAnchor constraintEqualToConstant:22].active = YES;
+    }
+    if ([leftBtnView respondsToSelector:@selector(heightAnchor)]) {
+        [leftBtnView.heightAnchor constraintEqualToConstant:22].active = YES;
+    }
+#endif
     [leftBtnView setBackgroundImage:[UIImage imageNamed:@"left-back"] forState:UIControlStateNormal];
     [leftBtnView addTarget:self action:@selector(leftAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc]initWithCustomView:leftBtnView];
