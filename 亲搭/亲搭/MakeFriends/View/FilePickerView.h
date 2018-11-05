@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 @protocol FilePickerViewDelegate <NSObject>
 
-- (void)getSelectData:(NSString *)data;
+- (void)getSelectData:(NSString *)data type:(NSInteger)type;
 
 @end
 
 @interface FilePickerView : UIView
 @property (nonatomic, weak) id<FilePickerViewDelegate> delegate;
-
+@property(strong,nonatomic) NSMutableArray *dataArray;
+@property(assign,nonatomic) NSInteger type;
+@property(strong,nonatomic) NSString *title;
 + (FilePickerView *)instanceDatePickerView;
 
 @end

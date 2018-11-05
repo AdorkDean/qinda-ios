@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1F1D12EC218ED68100BBD085 /* FilePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D12EB218ED68100BBD085 /* FilePickerView.m */; };
-		1F1D12F0218EDF9F00BBD085 /* FilePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F1D12EF218EDF9F00BBD085 /* FilePickerView.xib */; };
 		65139A98217862E1004DDF80 /* HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139A92217862E1004DDF80 /* HUD.m */; };
 		65139A99217862E1004DDF80 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139A94217862E1004DDF80 /* MBProgressHUD+NJ.m */; };
 		65139A9A217862E1004DDF80 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65139A95217862E1004DDF80 /* MBProgressHUD.bundle */; };
@@ -56,6 +55,7 @@
 		655ABF2F216F4B3D0067ED86 /* HXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABF2E216F4B3D0067ED86 /* HXTabBarController.m */; };
 		655ABF33217091720067ED86 /* HXLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABF32217091720067ED86 /* HXLoginVC.m */; };
 		655ABF37217098260067ED86 /* HXNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 655ABF36217098260067ED86 /* HXNavigationVC.m */; };
+		658EF51F219012EE00671C9C /* FilePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 658EF51E219012EE00671C9C /* FilePickerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +78,6 @@
 /* Begin PBXFileReference section */
 		1F1D12EA218ED68100BBD085 /* FilePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilePickerView.h; sourceTree = "<group>"; };
 		1F1D12EB218ED68100BBD085 /* FilePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilePickerView.m; sourceTree = "<group>"; };
-		1F1D12EF218EDF9F00BBD085 /* FilePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilePickerView.xib; sourceTree = "<group>"; };
 		65139A91217862E1004DDF80 /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
 		65139A92217862E1004DDF80 /* HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUD.m; sourceTree = "<group>"; };
 		65139A93217862E1004DDF80 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
@@ -166,6 +165,7 @@
 		655ABF35217098260067ED86 /* HXNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNavigationVC.h; sourceTree = "<group>"; };
 		655ABF36217098260067ED86 /* HXNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNavigationVC.m; sourceTree = "<group>"; };
 		655ABF38217099320067ED86 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		658EF51E219012EE00671C9C /* FilePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilePickerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,7 +321,7 @@
 				65139AEB218AED3F004DDF80 /* RankCell.xib */,
 				1F1D12EA218ED68100BBD085 /* FilePickerView.h */,
 				1F1D12EB218ED68100BBD085 /* FilePickerView.m */,
-				1F1D12EF218EDF9F00BBD085 /* FilePickerView.xib */,
+				658EF51E219012EE00671C9C /* FilePickerView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -694,7 +694,7 @@
 			files = (
 				655ABF1D216F409F0067ED86 /* yindao1.jpg in Resources */,
 				655ABECA216F34CA0067ED86 /* LaunchScreen.storyboard in Resources */,
-				1F1D12F0218EDF9F00BBD085 /* FilePickerView.xib in Resources */,
+				658EF51F219012EE00671C9C /* FilePickerView.xib in Resources */,
 				65139AED218AED3F004DDF80 /* RankCell.xib in Resources */,
 				655ABEC7216F34CA0067ED86 /* Assets.xcassets in Resources */,
 				65139AE5218A985D004DDF80 /* ReceiveMarriageCell.xib in Resources */,

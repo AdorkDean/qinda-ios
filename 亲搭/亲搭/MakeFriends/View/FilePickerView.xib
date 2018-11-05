@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1618" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,72 +15,70 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJ0-F6-kNK">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPN-62-RzF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学历" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2C-cf-XVw">
-                            <rect key="frame" x="167" y="36" width="35" height="21"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="长条03" translatesAutoresizingMaskIntoConstraints="NO" id="AvO-bN-v3E">
+                            <rect key="frame" x="51" y="234" width="4" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="方块03" translatesAutoresizingMaskIntoConstraints="NO" id="eug-cI-Wrc">
+                            <rect key="frame" x="38" y="279" width="30" height="38"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ztv-dE-ack">
+                            <rect key="frame" x="126" y="225" width="122" height="216"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        </pickerView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="方块03" translatesAutoresizingMaskIntoConstraints="NO" id="AMD-5K-a30">
+                            <rect key="frame" x="307" y="271" width="30" height="55"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="长条03" translatesAutoresizingMaskIntoConstraints="NO" id="d1U-3M-dqO">
+                            <rect key="frame" x="319" y="234" width="5" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUA-t3-jLq">
+                            <rect key="frame" x="95" y="452" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="确定"/>
+                            <connections>
+                                <action selector="sureAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="UEg-07-4ab"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Cs-Fd-ajq">
+                            <rect key="frame" x="263" y="452" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="取消"/>
+                            <connections>
+                                <action selector="cancleAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="1uT-wE-S11"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学历" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxZ-IC-YZH">
+                            <rect key="frame" x="80" y="148" width="214" height="69"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="长条03" translatesAutoresizingMaskIntoConstraints="NO" id="vrB-Jp-erK">
-                            <rect key="frame" x="33" y="20" width="25" height="525"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="方块03" translatesAutoresizingMaskIntoConstraints="NO" id="agk-fN-gNZ">
-                            <rect key="frame" x="294" y="217" width="59" height="58"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="方块03" translatesAutoresizingMaskIntoConstraints="NO" id="d8L-XI-3pY">
-                            <rect key="frame" x="17" y="217" width="57" height="58"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="长条03" translatesAutoresizingMaskIntoConstraints="NO" id="6WT-XC-0Ea">
-                            <rect key="frame" x="307" y="62" width="28" height="465"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBE-kr-4Yf">
-                            <rect key="frame" x="232" y="550" width="31" height="28"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="取消"/>
-                            <connections>
-                                <action selector="cancleAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="vtD-ye-T2P"/>
-                            </connections>
-                        </button>
-                        <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KYc-lf-Kcf">
-                            <rect key="frame" x="97" y="165" width="166" height="162"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        </pickerView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytE-la-Ry8">
-                            <rect key="frame" x="97" y="559" width="31" height="11"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="确认"/>
-                            <connections>
-                                <action selector="sureAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7Mk-rE-iPd"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="backView" destination="hJ0-F6-kNK" id="vVQ-UG-A7i"/>
-                <outlet property="cancleBtn" destination="fBE-kr-4Yf" id="Fa0-5W-ne4"/>
-                <outlet property="leftCenterImg" destination="d8L-XI-3pY" id="Go9-sQ-iyy"/>
-                <outlet property="leftLineImg" destination="vrB-Jp-erK" id="2ag-R9-3xM"/>
-                <outlet property="pickView" destination="KYc-lf-Kcf" id="GC7-TM-RD9"/>
-                <outlet property="rightCenterImg" destination="agk-fN-gNZ" id="yEh-JX-lL6"/>
-                <outlet property="rightLineImg" destination="6WT-XC-0Ea" id="asu-gV-gPz"/>
-                <outlet property="sureBtn" destination="ytE-la-Ry8" id="DqW-Sw-9ga"/>
-                <outlet property="titleLabel" destination="o2C-cf-XVw" id="hjE-hm-VIp"/>
+                <outlet property="backView" destination="vPN-62-RzF" id="9rg-y4-p9x"/>
+                <outlet property="cancleBtn" destination="5Cs-Fd-ajq" id="ueY-jv-2Mr"/>
+                <outlet property="leftCenterImg" destination="eug-cI-Wrc" id="Jbv-Xn-6of"/>
+                <outlet property="leftLineImg" destination="AvO-bN-v3E" id="nB9-7e-xsC"/>
+                <outlet property="pickerView" destination="ztv-dE-ack" id="4Cj-fO-11H"/>
+                <outlet property="rightCenterImg" destination="AMD-5K-a30" id="bYg-87-Rno"/>
+                <outlet property="rightLineImg" destination="d1U-3M-dqO" id="q7V-w2-b5e"/>
+                <outlet property="sureBtn" destination="sUA-t3-jLq" id="TZ5-1O-AWj"/>
+                <outlet property="titleLabel" destination="HxZ-IC-YZH" id="CL6-iR-bf2"/>
             </connections>
-            <point key="canvasLocation" x="-9.5" y="57.5"/>
+            <point key="canvasLocation" x="-120.5" y="67.5"/>
         </view>
     </objects>
     <resources>

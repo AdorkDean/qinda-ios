@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef void (^CommitValueBlock) (NSDictionary *dict);
 
 @interface FilterVC : UIViewController
+@property(nonatomic, copy) CommitValueBlock commitValueBlock;
 
 @end

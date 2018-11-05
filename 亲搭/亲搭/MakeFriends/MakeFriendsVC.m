@@ -252,6 +252,10 @@
 - (void)siftAction{
     FilterVC *filterVC = [FilterVC new];
     self.tabBarController.tabBar.hidden = YES;
+    filterVC.commitValueBlock = ^(NSDictionary *post_dict){
+        
+        NSLog(@"post_dict = %@",post_dict);
+    };
     [self.navigationController pushViewController:filterVC animated:YES];
     NSLog(@"筛选筛选");
 }

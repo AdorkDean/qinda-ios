@@ -9,10 +9,10 @@
 
 #import "FilterVC.h"
 #import "FilePickerView.h"
-@interface FilterVC ()<UIScrollViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
-{
-    FilePickerView *_pikerView;
-}
+
+
+@interface FilterVC ()<UIScrollViewDelegate,FilePickerViewDelegate>
+
 @property(nonatomic,strong)UIScrollView *containScrollView;
 
 @property(strong,nonatomic)UILabel *ageLabel;
@@ -20,7 +20,7 @@
 @property(strong,nonatomic)UILabel *academicLabel;
 @property(strong,nonatomic)UILabel *incomeLabel;
 @property(strong,nonatomic)UILabel *locationLabel;
-@property(strong,nonatomic)UIPickerView *pickerView;
+@property(strong,nonatomic)FilePickerView *pickerView;
 @end
 
 @implementation FilterVC
@@ -64,7 +64,7 @@
     _academicLabel = [UILabel new];
     _incomeLabel = [UILabel new];
     _locationLabel = [UILabel new];
-
+    
     UIView *ageItemView = [self creatItemView:CGRectMake(0, 5, WIDTH-20, 50) title:@"年龄" leftImg:@"age_icon" action:@selector(itemAction:) tag:3400 centerLabel:_ageLabel];
     [_containScrollView addSubview:ageItemView];
     
@@ -97,21 +97,31 @@
 }
 - (void)itemAction:(UIButton *)sender{
     NSLog(@"筛选条件%ld",sender.tag);
+    _pickerView = [FilePickerView instanceDatePickerView];
+    _pickerView.frame = self.view.bounds;
+    _pickerView.backgroundColor = HXColorA(0, 0, 0, 0.2);
+    _pickerView.delegate = self;
+    [self.view addSubview:_pickerView];
     if (sender.tag == 3400) {
-        _ageLabel.text = @"18岁";
-        
-        _pikerView = [FilePickerView instanceDatePickerView];
-        _pikerView.frame = self.view.bounds;
-        _pikerView.backgroundColor = HXColorA(0, 0, 0, 0.2);
-        [self.view addSubview:_pikerView];
+        _pickerView.type = 3400;
+        _pickerView.title = @"年龄选择";
+        _pickerView.dataArray = [NSMutableArray arrayWithObjects:@"不限",@"18岁-27岁",@"28岁-37岁",@"38岁-47岁",@"48岁-57岁",nil];
     } else if (sender.tag == 3401) {
-        _heightLabel.text = @"175cm";
+        _pickerView.type = 3401;
+        _pickerView.title = @"身高选择";
+        _pickerView.dataArray = [NSMutableArray arrayWithObjects:@"不限",@"145cm-154cm",@"145cm-154cm",@"155cm-164cm",@"165cm-174cm",@"175cm-184cm",@"185cm-194cm",@"195cm以上",nil];
     } else if (sender.tag == 3402) {
-        _academicLabel.text = @"本科";
+        _pickerView.type = 3402;
+        _pickerView.title = @"学历选择";
+        _pickerView.dataArray = [NSMutableArray arrayWithObjects:@"不限",@"博士",@"硕士",@"本科",@"大专",@"高中及以下",nil];
     } else if (sender.tag == 3403) {
-        _incomeLabel.text = @"10-20k";
+        _pickerView.type = 3403;
+        _pickerView.title = @"月收入选择";
+        _pickerView.dataArray = [NSMutableArray arrayWithObjects:@"不限",@"3000-5000",@"5000-8000",@"8000-10000",@"10000-20000",@"20000以上",nil];
     } else if (sender.tag == 3404) {
-        _locationLabel.text = @"北京";
+        _pickerView.type = 3404;
+        _pickerView.title = @"所在地选择";
+        _pickerView.dataArray = [NSMutableArray arrayWithObjects:@"不限",@"北京",@"上海",@"广州",@"深圳",@"重庆",@"武汉",@"天津",nil];
     }
 }
 - (void)commitAction{
@@ -122,7 +132,15 @@
     [post_dict setValue:_incomeLabel.text forKey:@"income"];
     [post_dict setValue:_locationLabel.text forKey:@"location"];
     
+    
     NSLog(@"提交%@",post_dict);
+    __weak typeof(self) weakself = self;
+    
+    if (weakself.commitValueBlock) {
+        //将自己的值传出去，完成传值
+        weakself.commitValueBlock(post_dict);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (UIView *)creatItemView:(CGRect)frame title:(NSString *)title leftImg:(NSString *)leftImg action:(_Nonnull SEL)action tag:(NSInteger)tag centerLabel:(UILabel *)centerLabel{
     CGFloat itemWidth = frame.size.width;
@@ -154,11 +172,37 @@
 
     return itemView;
 }
-
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return 5;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
+- (void)getSelectData:(NSString *)data type:(NSInteger)type{
+    switch (type) {
+        case 3400:
+            _ageLabel.text = data;
+            break;
+        case 3401:
+            _heightLabel.text = data;
+            break;
+        case 3402:
+            _academicLabel.text = data;
+            break;
+        case 3403:
+            _incomeLabel.text = data;
+            break;
+        case 3404:
+            _locationLabel.text = data;
+            break;
+        default:
+            break;
+    }
+    NSLog(@"data = %@ =%ld",data,type);
+}
 @end
