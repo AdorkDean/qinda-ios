@@ -43,10 +43,12 @@
     _leftCenterImg.frame = CGRectMake(0, 0, 10, 10);
     _leftCenterImg.center = _leftLineImg.center;
     
-    CGFloat titleWidth = [HXGetLabelWidthOrHeight getWidthWithText:_title height:20 font:17];
+    CGFloat titleWidth = [HXGetLabelWidthOrHeight getWidthWithText:_title height:20 font:20];
     _titleLabel.frame = CGRectMake((fWidth-titleWidth)/2.0, CGRectGetMinY(_leftLineImg.frame), titleWidth, 20);
     _titleLabel.textColor = TextColor;
     _titleLabel.text = _title;
+    _titleLabel
+    .font = [UIFont systemFontOfSize:20];
     
     _pickerView.frame = CGRectMake(CGRectGetMaxX(_leftLineImg.frame)+10, fHeight/4.0, fWidth*2/3.0-20, fHeight/2.0);
     _pickerView.delegate = self;
@@ -61,13 +63,15 @@
     _sureBtn.layer.borderColor = BorderColor;
     _sureBtn.layer.cornerRadius = 3;
     _sureBtn.tintColor = TextColor;
-    
+    _sureBtn.titleLabel.font = [UIFont systemFontOfSize:17];
+
     _cancleBtn.frame = CGRectMake(CGRectGetMaxX(_sureBtn.frame)+10, CGRectGetMaxY(_leftLineImg.frame)+15, fWidth*2/6.0-5, 30);
     _cancleBtn.layer.borderWidth = 1;
     _cancleBtn.layer.borderColor = BorderColor;
     _cancleBtn.layer.cornerRadius = 3;
     _cancleBtn.tintColor = TextColor;
-    
+    _sureBtn.titleLabel.font = [UIFont systemFontOfSize:17];
+
     if (_dataArray.count != 0) {
         _selectData = _dataArray[0];
     }
@@ -128,8 +132,10 @@
     text.textAlignment = NSTextAlignmentCenter;
     if (row == _selectRow) {
         text.textColor = TextColor;
+        text.font = [UIFont systemFontOfSize:18];
     } else {
         text.textColor = TextGrayColor;
+        text.font = [UIFont systemFontOfSize:16];
     }
     text.text = [_dataArray objectAtIndex:row];
     text.adjustsFontSizeToFitWidth = YES;

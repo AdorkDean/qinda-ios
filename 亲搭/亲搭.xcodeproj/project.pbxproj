@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F1D12EC218ED68100BBD085 /* FilePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D12EB218ED68100BBD085 /* FilePickerView.m */; };
+		1F1D12F42190803D00BBD085 /* MemberDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D12F32190803D00BBD085 /* MemberDetailVC.m */; };
 		65139A98217862E1004DDF80 /* HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139A92217862E1004DDF80 /* HUD.m */; };
 		65139A99217862E1004DDF80 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 65139A94217862E1004DDF80 /* MBProgressHUD+NJ.m */; };
 		65139A9A217862E1004DDF80 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65139A95217862E1004DDF80 /* MBProgressHUD.bundle */; };
@@ -78,6 +79,8 @@
 /* Begin PBXFileReference section */
 		1F1D12EA218ED68100BBD085 /* FilePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilePickerView.h; sourceTree = "<group>"; };
 		1F1D12EB218ED68100BBD085 /* FilePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilePickerView.m; sourceTree = "<group>"; };
+		1F1D12F22190803D00BBD085 /* MemberDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberDetailVC.h; sourceTree = "<group>"; };
+		1F1D12F32190803D00BBD085 /* MemberDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberDetailVC.m; sourceTree = "<group>"; };
 		65139A91217862E1004DDF80 /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
 		65139A92217862E1004DDF80 /* HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUD.m; sourceTree = "<group>"; };
 		65139A93217862E1004DDF80 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
@@ -193,6 +196,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F1D12F121907F7800BBD085 /* 会员详情 */ = {
+			isa = PBXGroup;
+			children = (
+				1F1D12F22190803D00BBD085 /* MemberDetailVC.h */,
+				1F1D12F32190803D00BBD085 /* MemberDetailVC.m */,
+			);
+			name = "会员详情";
+			sourceTree = "<group>";
+		};
 		65139A90217862E1004DDF80 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +306,7 @@
 		65139ABA217DA1EE004DDF80 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F1D12F121907F7800BBD085 /* 会员详情 */,
 				65139B0D218C39D6004DDF80 /* 筛选 */,
 				65139B0C218C3847004DDF80 /* 对我征婚 */,
 				65139B0B218C382D004DDF80 /* 排行榜 */,
@@ -728,6 +741,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1D12EC218ED68100BBD085 /* FilePickerView.m in Sources */,
+				1F1D12F42190803D00BBD085 /* MemberDetailVC.m in Sources */,
 				65139AE8218ADC88004DDF80 /* SendZhenghunRankVC.m in Sources */,
 				65139B09218C25CA004DDF80 /* GetZanRankVC.m in Sources */,
 				655ABF28216F41560067ED86 /* MyVC.m in Sources */,

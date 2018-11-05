@@ -13,6 +13,7 @@
 #import "ReceiveMarriageVC.h"
 #import "MarriageRankVC.h"
 #import "FilterVC.h"
+#import "MemberDetailVC.h"
 @interface MakeFriendsVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(strong,nonatomic)UITableView *tableView;
@@ -252,9 +253,9 @@
 - (void)siftAction{
     FilterVC *filterVC = [FilterVC new];
     self.tabBarController.tabBar.hidden = YES;
-    filterVC.commitValueBlock = ^(NSDictionary *post_dict){
-        
-        NSLog(@"post_dict = %@",post_dict);
+    filterVC.commitValueBlock = ^(NSMutableDictionary* post_dict){
+        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:post_dict];
+        NSLog(@"post_dict = %@",dict);
     };
     [self.navigationController pushViewController:filterVC animated:YES];
     NSLog(@"筛选筛选");
@@ -287,5 +288,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     return WIDTH+55;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.tabBarController.tabBar.hidden = YES;
+    MemberDetailVC *memberVC = [MemberDetailVC new];
+    [self.navigationController pushViewController:memberVC animated:YES];
 }
 @end

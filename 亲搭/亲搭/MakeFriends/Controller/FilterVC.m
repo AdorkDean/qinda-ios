@@ -64,6 +64,12 @@
     _academicLabel = [UILabel new];
     _incomeLabel = [UILabel new];
     _locationLabel = [UILabel new];
+
+    _ageLabel.text = @"不限";
+    _heightLabel.text = @"不限";
+    _academicLabel.text = @"不限";
+    _incomeLabel.text = @"不限";
+    _locationLabel.text = @"不限";
     
     UIView *ageItemView = [self creatItemView:CGRectMake(0, 5, WIDTH-20, 50) title:@"年龄" leftImg:@"age_icon" action:@selector(itemAction:) tag:3400 centerLabel:_ageLabel];
     [_containScrollView addSubview:ageItemView];
@@ -104,23 +110,23 @@
     [self.view addSubview:_pickerView];
     if (sender.tag == 3400) {
         _pickerView.type = 3400;
-        _pickerView.title = @"年龄选择";
+        _pickerView.title = @"年龄";
         _pickerView.dataArray = [NSMutableArray arrayWithObjects:@"不限",@"18岁-27岁",@"28岁-37岁",@"38岁-47岁",@"48岁-57岁",nil];
     } else if (sender.tag == 3401) {
         _pickerView.type = 3401;
-        _pickerView.title = @"身高选择";
+        _pickerView.title = @"身高";
         _pickerView.dataArray = [NSMutableArray arrayWithObjects:@"不限",@"145cm-154cm",@"145cm-154cm",@"155cm-164cm",@"165cm-174cm",@"175cm-184cm",@"185cm-194cm",@"195cm以上",nil];
     } else if (sender.tag == 3402) {
         _pickerView.type = 3402;
-        _pickerView.title = @"学历选择";
+        _pickerView.title = @"学历";
         _pickerView.dataArray = [NSMutableArray arrayWithObjects:@"不限",@"博士",@"硕士",@"本科",@"大专",@"高中及以下",nil];
     } else if (sender.tag == 3403) {
         _pickerView.type = 3403;
-        _pickerView.title = @"月收入选择";
+        _pickerView.title = @"月收入";
         _pickerView.dataArray = [NSMutableArray arrayWithObjects:@"不限",@"3000-5000",@"5000-8000",@"8000-10000",@"10000-20000",@"20000以上",nil];
     } else if (sender.tag == 3404) {
         _pickerView.type = 3404;
-        _pickerView.title = @"所在地选择";
+        _pickerView.title = @"所在地";
         _pickerView.dataArray = [NSMutableArray arrayWithObjects:@"不限",@"北京",@"上海",@"广州",@"深圳",@"重庆",@"武汉",@"天津",nil];
     }
 }
